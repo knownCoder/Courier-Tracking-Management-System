@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shipment Result</title>
+</head>
+
+<body>
+
+{% if shipment %}
+
+<h2>Shipment Details</h2>
+
+<p>
+    Tracking ID:
+    {{ shipment.tracking_id }}
+</p>
+
+<p>
+    Status:
+    {{ shipment.current_status }}
+</p>
+
+<p>
+    Location:
+    {{ shipment.current_location }}
+</p>
+
+<p>
+    Expected Delivery:
+    {{ shipment.expected_delivery }}
+</p>
+
+<p>
+    Last Updated:
+    {{ shipment.last_updated }}
+</p>
+
+{% else %}
+
+<h2>
+Tracking ID Not Found
+</h2>
+
+{% endif %}
+
+</body>
+
+</html>
